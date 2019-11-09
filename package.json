@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "stest": "mocha pallindrome.test.js",
-    "test": "mocha ./test/**.test.js --recursive"
+    "test": "mocha ./test/**.test.js --recursive",
+    "test:ci": "mocha ./test/**.test.js --recursive --reporter mocha-junit-reporter"
   },
   "author": "AK",
   "license": "ISC",

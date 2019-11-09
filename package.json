@@ -8,7 +8,7 @@
     "stest": "mocha pallindrome.test.js",
     "pretty": "prettier --write \"./**/*.js\"",
     "test": "mocha ./test/**.test.js --recursive",
-    "test:ci": "mocha ./test/**.test.js --recursive --reporter mocha-junit-reporter --reporter-options outputs=true"
+    "test:ci": "mocha ./test/**.test.js --recursive --reporter mocha-junit-reporter --reporter-options toConsole=true"
   },
   "husky": {
     "hooks": {

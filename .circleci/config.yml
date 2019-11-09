@@ -18,7 +18,7 @@ jobs: # a collection of steps
             - ./node_modules
       - run: # run tests
           name: test
-          command: mocha ./test/**.test.js --recursive --reporter mocha-junit-reporter
+          command: ./node_modules/.bin/mocha ./test/**.test.js --recursive --reporter mocha-junit-reporter
       - store_test_results: # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: test
       - store_artifacts:

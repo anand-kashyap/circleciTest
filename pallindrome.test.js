@@ -30,5 +30,11 @@ describe('Pallindrome Testing', () => {
       const res = pal.reverse('arnold schwas');
       expect(res).to.equal('sawhcs dlonra');
     });
+
+    it('should fail', () => {
+      const res = sinon.stub(pal, 'reverse').callsFake(() => { console.log('failed intentionally'); return; });
+      pal.reverse('str');
+      expect(res).to.be.a('number');
+    });
   });
 });

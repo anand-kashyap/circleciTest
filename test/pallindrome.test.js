@@ -31,10 +31,10 @@ describe('Pallindrome Testing', () => {
       expect(res).to.equal('sawhcs dlonra');
     });
 
-    it('should fail', () => {
+    /* it('should fail', () => {
       const res = sinon.stub(pal, 'reverse').callsFake(() => { console.log('failed intentionally'); return; });
       pal.reverse('str');
       expect(res).to.be.a('number');
-    });
+    }); */
   });
 });

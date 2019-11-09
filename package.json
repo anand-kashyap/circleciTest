@@ -8,7 +8,7 @@
     "stest": "mocha pallindrome.test.js",
     "pretty": "prettier --write \"./**/*.js\"",
     "test": "mocha ./test/**.test.js --recursive",
-    "test:ci": "mocha ./test/**.test.js --recursive --reporter mocha-junit-reporter --reporter-options toConsole=true"
+    "test:ci": "mocha ./test/**.test.js --recursive --reporter mocha-multi-reporters --reporter-options configFile=config.json"
   },
   "husky": {
     "hooks": {
@@ -29,6 +29,7 @@
     "lint-staged": "^9.4.2",
     "mocha": "^6.2.2",
     "mocha-junit-reporter": "^1.23.1",
+    "mocha-multi-reporters": "^1.1.7",
     "prettier": "^1.19.1",
     "sinon": "^7.5.0"
   }

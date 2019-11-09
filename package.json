@@ -6,15 +6,30 @@
   "scripts": {
     "start": "node index.js",
     "stest": "mocha pallindrome.test.js",
+    "pretty": "prettier --write \"./**/*.js\"",
     "test": "mocha ./test/**.test.js --recursive",
     "test:ci": "mocha ./test/**.test.js --recursive --reporter mocha-junit-reporter --reporter-options outputs=true"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm test"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+        "npm run pretty",
+        "git add"
+      ]
   },
   "author": "AK",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
-    "sinon": "^7.5.0",
-    "mocha": "6.2.2",
-    "mocha-junit-reporter": "^1.23.1"
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "mocha": "^6.2.2",
+    "mocha-junit-reporter": "^1.23.1",
+    "prettier": "^1.19.1",
+    "sinon": "^7.5.0"
   }
 }

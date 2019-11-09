@@ -7,7 +7,7 @@
     "start": "node index.js",
     "stest": "mocha pallindrome.test.js",
     "test": "mocha ./test/**.test.js --recursive",
-    "test:ci": "mocha ./test/**.test.js --recursive --reporter mocha-junit-reporter outputs=true"
+    "test:ci": "mocha ./test/**.test.js --recursive --reporter mocha-junit-reporter --reporter-options outputs=true"
   },
   "author": "AK",
   "license": "ISC",

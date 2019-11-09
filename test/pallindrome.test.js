@@ -2,7 +2,7 @@ const chai = require('chai');
 const expect = chai.expect;
 const sinon = require('sinon');
 
-const pal = require('./pallindrome');
+const pal = require('../pallindrome');
 
 describe('Pallindrome Testing', () => {
   context('Testing Rverse function', () => {

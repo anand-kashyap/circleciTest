@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "stest": "mocha pallindrome.test.js",
-    "test": "mocha ./**/**.test.js --recursive"
+    "test": "mocha ./test/**.test.js --recursive"
   },
   "author": "AK",
   "license": "ISC",
